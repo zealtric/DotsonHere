@@ -1,0 +1,10 @@
+.van-info{
+  top: -5px !important;
+  right: 3px !important
+}
+
+.add{
+  height: 28px !important;
+  margin-bottom:-3px;
+  margin-top:-3px;
+}

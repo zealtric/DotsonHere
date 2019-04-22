@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/sonDetail/sonDetail",
+    "pages/imagePreview/imagePreview",
+    "pages/qson/qson",
+    "pages/qsonf/qsonf",
+    "pages/self/self",
+    "pages/cashin/cashin",
+    "pages/othersSelf/othersSelf"
+  ],
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "selectedColor": "#FCC53A",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "广场",
+        "iconPath": "images/home-normal.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/qsonf/qsonf",
+        "text": "去丧",
+        "iconPath": "images/add-normal.png",
+        "selectedIconPath": "images/add-active.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "我的",
+        "iconPath": "images/mine-normal.png",
+        "selectedIconPath": "images/mine-active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "多丧 | 就这块地方，别拿走",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-tabbar": "vant-weapp/tabbar",
+    "van-tabbar-item": "vant-weapp/tabbar-item",
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col"
+  }
+}

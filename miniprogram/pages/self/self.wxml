@@ -1,0 +1,41 @@
+<!-- <van-tabbar active="{{ activeBar }}" bind:change="barOnChange" active-color="#4C4C4C">
+  <van-tabbar-item>
+    <image
+      slot="icon"
+      src="../../images/home-normal.png"
+      mode="aspectFit"
+    />
+    <image
+      slot="icon-active"
+      src="../../images/home-active.png"
+      mode="aspectFit"
+    />
+    广场
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <image class='add'
+      slot="icon"
+      src="../../images/add-normal.png"
+      mode="aspectFit"
+    />
+    <image class="add"
+      slot="icon-active"
+      src="../../images/add-active.png"
+      mode="aspectFit"
+    />
+    去丧
+  </van-tabbar-item>
+  <van-tabbar-item info="10">
+    <image
+      slot="icon"
+      src="../../images/mine-normal.png"
+      mode="aspectFit"
+    />
+    <image
+      slot="icon-active"
+      src="../../images/mine-active.png"
+      mode="aspectFit"
+    />
+    我的
+  </van-tabbar-item>
+</van-tabbar> -->

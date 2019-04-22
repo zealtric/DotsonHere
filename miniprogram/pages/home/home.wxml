@@ -1,0 +1,21 @@
+<van-tabs active="{{ activeNav }}" bind:change="tabOnChange" sticky swipeable>
+  <van-tab title="守护">内容 1</van-tab>
+  <van-tab title="推荐">
+    <view  wx:for="{{sonText}}" wx:key="id" bindtap='home_sonDetail' data-desc='{{item._id}}'>
+      <view>
+        <view><label>{{item.sonAvatar}}</label></view>
+        <view>
+          <view><label>{{item.sonName}}</label></view>
+          <view><label>{{item.sonTime}}</label></view>
+        </view>
+      </view>
+      <view>
+        <text>{{item.sonText}}</text>
+      </view>
+      <view></view>
+    </view>
+  </van-tab>
+  <van-tab title="最新">内容 3</van-tab>
+  <van-tab title="微信好友">内容 4</van-tab>
+</van-tabs>
+

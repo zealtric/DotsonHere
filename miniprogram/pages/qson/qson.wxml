@@ -1,0 +1,15 @@
+<!-- <view>
+  <view id='sonArea'>
+    <textarea placeholder='只要我以一百万人玩多丧为目标，及时没有达到，那我的人生也不会太差= =' placeholder-style='font-size:12px;' maxlength='-1' auto-focus='true' auto-height='true'></textarea>
+  </view>
+  <view id='bottom'>
+  </view>
+</view> -->
+<view>
+  <view>
+    <form bindsubmit="bindFormSubmit">
+      <textarea placeholder='只要我以一百万人玩多丧为目标，及时没有达到，那我的人生也不会太差= =' placeholder-style='font-size:12px;' maxlength='-1' auto-focus auto-height name="textarea"></textarea>
+      <button form-type='submit' id='qsonBtn'>去丧</button>
+    </form>
+  </view>
+</view>

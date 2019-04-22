@@ -1,0 +1,14 @@
+<view>
+    <view>
+      <view><label>{{Detail.sonAvatar}}</label></view>
+      <view>
+        <view><label>{{Detail.sonName}}</label></view>
+        <view><label>{{Detail.sonTime}}</label></view>
+      </view>
+      <view>滋醒他</view>
+    </view>
+    <view>
+      <text>{{Detail.sonText}}</text>
+    </view>
+    <view></view>
+  </view>
