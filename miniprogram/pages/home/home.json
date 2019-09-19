@@ -2,5 +2,7 @@
   "usingComponents": {
     "van-tab": "vant-weapp/tab",
     "van-tabs": "vant-weapp/tabs"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

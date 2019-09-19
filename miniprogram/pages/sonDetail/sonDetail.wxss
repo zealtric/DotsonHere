@@ -1,1 +1,228 @@
 /* pages/sonDetail/sonDetail.wxss */
+
+.square{
+  padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.writer{
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.writerContainer{
+  height: 40px;
+  width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar{
+  background-color: #258686;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+.number{
+  font-size: 16px;
+  width: 120px;
+}
+
+.time{
+  font-size: 12px;
+  width: 120px;
+}
+
+.follow{
+  width: 60px;
+  height: 30px;
+  float: right;
+  position: relative;
+  top: -44px;
+  margin-bottom: -30px;
+}
+
+.clear{
+  clear: both;
+}
+
+.follow button{
+  font-size: 12px;
+  padding: 0 4px;
+  border: 1px solid;
+  border-radius: 20px;
+  line-height: 25px;
+  height: 25px;
+}
+
+/* 底部margin记得修改 */
+.text{
+  margin-left: 50px;
+}
+
+.text text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.pic{
+  margin-left: 50px;
+  margin-bottom: 15px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picContainer{
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.co{
+  padding-top: 5px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+
+.coContainer{
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coContainer image{
+  width: 24px;
+  height: 24px;
+}
+
+
+
+.line{
+  width: 100vw;
+  height: 10px;
+  background-color: #258686;
+}
+
+.pltitle{
+  width: 100vw;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.pltitleContainer{
+  margin-left: 10px;
+}
+
+
+
+.plSquare{
+  padding: 10px 10px 0px 10px;
+  background-color: white;
+}
+
+.plSquareContainer{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #258686;
+}
+
+.plerContainer{
+  height: 40px;
+  width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plavatar{
+  background-color: #258686;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  text-align: center;
+  line-height: 36px;
+  margin-right: 10px;
+}
+
+.plnumber{
+  font-size: 14px;
+  width: 120px;
+}
+
+.pltime{
+  font-size: 12px;
+  width: 120px;
+}
+
+.plco image{
+  width: 24px;
+  height: 24px;
+}
+
+.plco{
+  width: 30px;
+  height: 30px;
+  float: right;
+  position: relative;
+  top: -32px;
+  margin-bottom: -30px;
+}
+
+.clear{
+  clear: both;
+}
+
+.pltext{
+  margin-left: 46px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+.textFunc{
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  background-color: #F0F0F0;
+}
+
+.textbox{
+  width: 100px;
+  flex-grow: 1;
+  padding: 5px 10px;
+}
+
+.textbox textarea{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 10px 0 10px 10px;
+}
+
+.send{
+  width: 60px;
+  height: 50px;
+}
+
+.send button{
+  height: 30px;
+  width: 50px;
+  margin: 10px 5px;
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}

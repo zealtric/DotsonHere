@@ -1,41 +1,87 @@
-<!-- <van-tabbar active="{{ activeBar }}" bind:change="barOnChange" active-color="#4C4C4C">
-  <van-tabbar-item>
-    <image
-      slot="icon"
-      src="../../images/home-normal.png"
-      mode="aspectFit"
-    />
-    <image
-      slot="icon-active"
-      src="../../images/home-active.png"
-      mode="aspectFit"
-    />
-    广场
-  </van-tabbar-item>
-  <van-tabbar-item>
-    <image class='add'
-      slot="icon"
-      src="../../images/add-normal.png"
-      mode="aspectFit"
-    />
-    <image class="add"
-      slot="icon-active"
-      src="../../images/add-active.png"
-      mode="aspectFit"
-    />
-    去丧
-  </van-tabbar-item>
-  <van-tabbar-item info="10">
-    <image
-      slot="icon"
-      src="../../images/mine-normal.png"
-      mode="aspectFit"
-    />
-    <image
-      slot="icon-active"
-      src="../../images/mine-active.png"
-      mode="aspectFit"
-    />
-    我的
-  </van-tabbar-item>
-</van-tabbar> -->
+<view id='logined' style="display:{{displayA}}">
+  <view id='header'>
+    <view id='nickname'>
+      <label>H#1</label>
+    </view>
+    <view id='money'>
+      <!-- <view id='zishuiqiang' class='money'>
+        <label class='moneyIcon'><image src='../../images/gun.png' mode='aspectFit'></image></label>
+        <label class='moneyNum'>121</label>
+      </view> -->
+      <view id='sangbi' class='money'>
+        <label class='moneyIcon'><image src='../../images/coin.png' mode='aspectFit'></image></label>
+        <label class='moneyNum'>121</label>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <view id='option'>
+      <!-- <image src='../../images/wallet.png' mode='aspectFit'></image> -->
+      <image src='../../images/message.png' mode='aspectFit'></image>
+    </view>
+    <view class='clear'></view>
+    <view id='bgtext'>
+      <image src='../../images/dotsonA.png' mode='aspectFit'></image>
+    </view>
+    <view class='clear'></view>
+  </view>
+
+
+  <view id='care'>
+    <view id='careContainer'>
+      <view class='care' bindtap='mysc'>
+        <view>6</view>
+        <view>收藏</view>
+      </view>
+      <view class='care' bindtap='mysh'>
+        <view>6</view>
+        <view>守护</view>
+      </view>
+      <view class='care' bindtap='myfs'>
+        <view>6</view>
+        <view>粉丝</view>
+      </view>
+    </view>
+  </view>
+
+  
+  <view id='moment' wx:for="{{myDays}}" wx:key="id" wx:for-item="i" wx:for-index="i_index">
+    <view id='momentContainer'>
+
+      <view class='moment' id='date'>
+        <view id='dateContainer'>
+          <label>{{i.day}}</label>
+          <label>{{i.month}}</label>
+        </view>
+      </view>
+
+      <view class='moment pic' id='pic'>
+        <view id='picContainer' class='picContainer' wx:for="{{i.images_fileID}}" wx:key="id" wx:for-item="j" style="width:{{imgWidth[i_index]}};height:{{imgHeight[i_index]}};">
+          <image src='{{j}}' mode='aspectFill' style='width:{{imgWidth[i_index]}};height:{{imgHeight[i_index]}};'></image>
+        </view>
+      </view>
+
+      <view class='moment' id='textCon' style="width:{{textConWidth[i_index]}}; left: {{textConLeft[i_index]}}; top: {{textConTop[i_index]}};">
+        <view id='textConContainer' style="width:{{textConWidth[i_index]}};">
+          <text>{{i.textCon}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view id='unlogin' style="display:{{displayB}}">
+  <view id='unheader'>
+    <view id='unheaderCon'>
+      <image src='../../images/unlogin.png' mode='aspectFit'></image>
+      <label>未登录</label>
+    </view>
+  </view>
+  <view id='uncenter'>
+    <view id='line'></view>
+    <view id='untext'>请选择登录方式</view>
+  </view>
+  <view id='loginbtn'>
+    <button type="primary" open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">微信登录</button>
+  </view>
+</view>

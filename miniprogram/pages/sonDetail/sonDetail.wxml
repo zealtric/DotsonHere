@@ -1,14 +1,103 @@
 <view>
-    <view>
-      <view><label>{{Detail.sonAvatar}}</label></view>
-      <view>
-        <view><label>{{Detail.sonName}}</label></view>
-        <view><label>{{Detail.sonTime}}</label></view>
+  <view bindtap='closeKb'>
+    <view class='square'>
+      <view class='squareContainer'>
+        <view class='writer'>
+          <view class='writerContainer'>
+            <view class='avatar'>
+              <label>H</label>
+            </view>
+            <view class='right'>
+              <view class='number'>
+                <label>#1</label>
+              </view>
+              <view class='time'>
+                <label>2008.02.04 23:00</label>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='follow'>
+          <view class='followContainer'>
+            <button catchtap='follow' style='background-color:{{btColor}}'>{{btText}}</button>
+          </view>
+        </view>
+        <view class='clear'></view>
+        <view class='text' style="margin-bottom:{{textMarginB}};">
+          <view class='textContainer'>
+            <text>{{Detail.textCon}}</text>
+          </view>
+        </view>
+        <view class='pic'>
+          <view class='picContainer' wx:for="{{Detail.images_fileID}}" wx:key="id" wx:for-item="j">
+            <image src='{{j}}' mode='aspectFill' style='width:{{imgWidth}};height:{{imgHeight}};'></image>
+          </view>
+        </view>
+        <view class='co'>
+          <view class='coContainer'>
+          <!-- 下面的bindtap改成catchtap，可以避免点击子元素触发父元素的点击事件 -->
+          <!-- data-属性可以让这个值在js中通过所点击元素的e.currentTarget.dataset中看到 -->
+            <image src='{{awImg}}' catchtap='aw'></image>
+            <image src='{{jsImg}}' catchtap='js'></image>
+            <image src='{{scImg}}' catchtap='sc'></image>
+            <image src='../../images/pinglun.png' catchtap='pl'></image>
+          </view>
+        </view>
       </view>
-      <view>滋醒他</view>
     </view>
-    <view>
-      <text>{{Detail.sonText}}</text>
+
+    <view class='line'></view>
+    <view class='pltitle'>
+      <view class='pltitleContainer'>评论</view>
     </view>
-    <view></view>
+
+    <view class='plSquare' wx:for="{{plSquare}}" wx:key="id" catchtap='hfpl' wx:for-item="i" wx:for-index="i_index" data-id="{{i._id}}">
+      <view class='plSquareContainer'>
+        <view class='pler'>
+          <view class='plerContainer'>
+            <view class='plavatar'>
+              <label>H</label>
+            </view>
+            <view class='plright'>
+              <view class='plnumber'>
+                <label>#1</label>
+              </view>
+              <view class='pltime'>
+                <label>{{i.plshowtime}}</label>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='plco'>
+          <view class='plcoContainer'>
+          <!-- 下面的bindtap改成catchtap，可以避免点击子元素触发父元素的点击事件 -->
+          <!-- data-属性可以让这个值在js中通过所点击元素的e.currentTarget.dataset中看到 -->
+            <image src='{{plawImg[i_index]}}' catchtap='awpl' data-id="{{i._id}}" data-index='{{i_index}}'></image>
+          </view>
+        </view>
+        <view class='pltext'>
+          
+          <view class='pltextContainer' wx:if="{{i.fatherID}}">
+            <text>回复 {{i.plCon}}：{{i.plCon}}</text>
+          </view>
+          <view class='pltextContainer' wx:else>
+            <text>{{i.plCon}}</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
   </view>
+
+
+  <form bindsubmit="formSubmit">
+    <view class='textFunc' style="bottom: {{KbHeight}}px; display: {{textFunc}}">
+      <view class='textbox'>
+        <textarea auto-height='true' placeholder='评论' show-confirm-bar="{{false}}" adjust-position="{{false}}" bindfocus='getKbH' bindblur='KbHide' bindinput="bindInput" value='{{textCon}}' name="textarea"></textarea>
+      </view>
+      <view class='send'>
+        <button form-type='submit' disabled='{{DISABLED}}' style="color: {{BtnColor}};background-color: {{BtnBgColor}};">发送</button>
+      </view>
+    </view>
+  </form>
+</view>

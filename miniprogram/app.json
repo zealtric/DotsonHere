@@ -6,13 +6,15 @@
     "pages/qson/qson",
     "pages/qsonf/qsonf",
     "pages/self/self",
-    "pages/cashin/cashin",
+    "pages/myCollect/myCollect",
+    "pages/myCover/myCover",
+    "pages/myFans/myFans",
     "pages/othersSelf/othersSelf"
   ],
   "tabBar": {
     "position": "bottom",
     "backgroundColor": "#fff",
-    "selectedColor": "#FCC53A",
+    "selectedColor": "#CF7F7F",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -38,7 +40,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "多丧 | 就这块地方，别拿走",
+    "navigationBarTitleText": "多丧",
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
@@ -46,5 +48,6 @@
     "van-tabbar-item": "vant-weapp/tabbar-item",
     "van-row": "vant-weapp/row",
     "van-col": "vant-weapp/col"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

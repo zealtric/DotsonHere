@@ -1,1 +1,237 @@
 /* pages/self/self.wxss */
+
+#header{
+  height: 140px;
+  width: 100vw;
+  background-color: #FFE66A;
+}
+
+#nickname{
+  width: 50vw;
+  height: 80px;
+  margin-left: 10px;
+}
+
+.moneyIcon image{
+  width: 16px;
+  height: 16px;
+}
+
+.moneyNum{
+  font-size: 16px;
+  color: #747474;
+}
+
+.money{
+  float: left;
+  width: 70px;
+}
+
+#money{
+  width: 50vw;
+  padding-top: 20px;
+  margin-left: 10px;
+}
+
+#option image{
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border: 2px solid #747474;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+#option{
+  float: right;
+  position: relative;
+  top: -110px;
+}
+
+#bgtext image{
+  height: 80px;
+  width: 160px;
+}
+
+#bgtext{
+  height: 80px;
+  width: 160px;
+  float: right;
+  position: relative;
+  top: -105px;
+  left: 30px;
+}
+
+.clear{
+  clear: both;
+}
+
+
+
+/* 这里是care */
+#care{
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid #A6A6A6;
+}
+
+#careContainer{
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -95px;
+}
+
+.care{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+
+/* 未登录的样式 */
+
+#unheader{
+  height: 140px;
+  background-color: #26292C;
+}
+
+#unheaderCon{
+  text-align: center;
+  height: 80px;
+  padding: 30px 0;
+}
+
+#unheader image{
+  height: 50px;
+  width: 50px;
+}
+
+#unheader label{
+  display: block;
+  color: #A6A6A6;
+  font-size: 14px;
+}
+
+#line{
+  height: 1px;
+  width: 86vw;
+  background-color: #D9D9D9;
+  position: relative;
+  top: 40px;
+  left: 7vw;
+}
+
+#untext{
+  width: 40vw;
+  text-align: center;
+  font-size: 12px;
+  color: #808080;
+  background-color: #fff;
+  position: relative;
+  top: 30px;
+  left: 30vw;
+}
+
+#loginbtn button{
+  width: 80vw;
+  position: relative;
+  top: 50px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 这里是moment */
+#moment{
+  height: 70px;
+  width: 100vw;
+  margin-bottom: 20px;
+}
+
+#momentContainer{
+  height: 70px;
+  width: 100vw;
+}
+
+#date{
+  width: 50px;
+  height: 70px;
+  margin-left: 8px;
+  margin-right: 12px;
+  text-align: center;
+}
+
+#dateContainer{
+  width: 50px;
+  height: 70px;
+}
+
+#dateContainer label{
+  font-size: 20px;
+}
+
+/* #pic{
+  width: 70px;
+  height: 70px;
+  margin-right: 5px;
+  position: relative;
+  left: 70px;
+  top: -70px;
+
+}
+
+.picContainer{
+  margin-right: 2px;
+  margin-bottom: 2px;
+  float: left;
+} */
+
+#pic{
+  width: 70px;
+  height: 70px;
+  margin-right: 5px;
+  position: relative;
+  left: 70px;
+  top: -70px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picContainer{
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+#textCon{
+  height: 70px;
+  margin-right: 8px;
+  position: relative;
+}
+
+#textConContainer{
+  height: 70px;
+}
+
+#textCon text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-size: 15px;
+}

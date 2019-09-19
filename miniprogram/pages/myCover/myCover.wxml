@@ -1,0 +1,7 @@
+<view class='guysList' wx:for="{{USERFollows}}" wx:key="openid" bindtap='othersSelf' wx:for-item="i" wx:for-index="i_index">
+  <view class='guysListContainer'>
+    <view>
+      <label>{{i.name}}</label>
+    </view>
+  </view>
+</view>

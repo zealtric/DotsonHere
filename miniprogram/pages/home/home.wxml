@@ -1,21 +1,46 @@
 <van-tabs active="{{ activeNav }}" bind:change="tabOnChange" sticky swipeable>
   <van-tab title="守护">内容 1</van-tab>
   <van-tab title="推荐">
-    <view  wx:for="{{sonText}}" wx:key="id" bindtap='home_sonDetail' data-desc='{{item._id}}'>
-      <view>
-        <view><label>{{item.sonAvatar}}</label></view>
-        <view>
-          <view><label>{{item.sonName}}</label></view>
-          <view><label>{{item.sonTime}}</label></view>
+    <view class='square' wx:for="{{sonSquare}}" wx:key="id" bindtap='home_sonDetail' wx:for-item="i" wx:for-index="i_index" data-id="{{i._id}}">
+      <view class='squareContainer'>
+        <view class='writer'>
+          <view class='writerContainer'>
+            <view class='avatar'>
+              <label>H</label>
+            </view>
+            <view class='right'>
+              <view class='number'>
+                <label>#1</label>
+              </view>
+              <view class='time'>
+                <label>{{i.showtime}}</label>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='text' style="margin-bottom:{{textMarginB[i_index]}};">
+          <view class='textContainer'>
+            <text>{{i.textCon}}</text>
+          </view>
+        </view>
+        <view class='pic'>
+          <view class='picContainer' wx:for="{{i.images_fileID}}" wx:key="id" wx:for-item="j">
+            <image src='{{j}}' mode='aspectFill' style='width:{{imgWidth[i_index]}};height:{{imgHeight[i_index]}};'></image>
+          </view>
+        </view>
+        <view class='co'>
+          <view class='coContainer'>
+          <!-- 下面的bindtap改成catchtap，可以避免点击子元素触发父元素的点击事件 -->
+          <!-- data-属性可以让这个值在js中通过所点击元素的e.currentTarget.dataset中看到 -->
+            <image src='{{awImg[i_index]}}' catchtap='aw' data-id="{{i._id}}" data-index='{{i_index}}'></image>
+            <image src='{{jsImg[i_index]}}' catchtap='js' data-id="{{i._id}}" data-index='{{i_index}}'></image>
+            <image src='{{scImg[i_index]}}' catchtap='sc' data-id="{{i._id}}" data-index='{{i_index}}'></image>
+            <image src='../../images/pinglun.png' catchtap='pl' data-id="{{i._id}}"></image>
+          </view>
         </view>
       </view>
-      <view>
-        <text>{{item.sonText}}</text>
-      </view>
-      <view></view>
     </view>
   </van-tab>
   <van-tab title="最新">内容 3</van-tab>
-  <van-tab title="微信好友">内容 4</van-tab>
 </van-tabs>
 

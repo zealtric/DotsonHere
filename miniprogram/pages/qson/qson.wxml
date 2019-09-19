@@ -1,15 +1,25 @@
-<!-- <view>
-  <view id='sonArea'>
-    <textarea placeholder='只要我以一百万人玩多丧为目标，及时没有达到，那我的人生也不会太差= =' placeholder-style='font-size:12px;' maxlength='-1' auto-focus='true' auto-height='true'></textarea>
-  </view>
-  <view id='bottom'>
-  </view>
-</view> -->
 <view>
   <view>
-    <form bindsubmit="bindFormSubmit">
-      <textarea placeholder='只要我以一百万人玩多丧为目标，及时没有达到，那我的人生也不会太差= =' placeholder-style='font-size:12px;' maxlength='-1' auto-focus auto-height name="textarea"></textarea>
-      <button form-type='submit' id='qsonBtn'>去丧</button>
+    <form bindsubmit="formSubmit">
+      <view id='textbox'>
+        <textarea placeholder='只要我以一百万人玩多丧为目标，即使没有达到，那我的人生也不会太差= =' placeholder-style='font-size:12pt;color:#ccc' maxlength='-1' auto-focus show-confirm-bar="{{false}}" adjust-position="{{false}}" bindfocus='getKbH' bindblur='KbHide' bindinput="bindInput" value='{{textCon}}' name="textarea"></textarea>
+      </view>
+
+      <view id='prePhoto'  wx:for="{{imgUrl}}" wx:for-index="bindex" wx:key="id">
+        <image src='{{item}}' bindtap='preview_img' mode='aspectFill'></image>
+        <!-- 删除按钮 -->
+        <view class="delete" bindtap="deleteImg" data-index="{{bindex}}">X</view>
+      </view>
+
+
+      <view id="bottomBar" style="bottom: {{KbHeight}}px;">
+        <view id="imgBtn" bindtap='choosePic'>
+          <image src='../../images/photo.png' mode='aspectFit'></image>
+        </view>
+        <view id='qsonBtn'>
+          <button form-type='submit' disabled='{{DISABLED}}' style="color: {{BtnColor}};border: 1px solid {{BtnBorderColor}};background-color: {{BtnBgColor}};">去丧</button>
+        </view>
+      </view>
     </form>
   </view>
 </view>

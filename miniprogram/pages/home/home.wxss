@@ -1,10 +1,86 @@
-.van-info{
-  top: -5px !important;
-  right: 3px !important
+.square{
+  padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
+  background-color: white;
 }
 
-.add{
-  height: 28px !important;
-  margin-bottom:-3px;
-  margin-top:-3px;
+/* 记得修改~~~~~~~~~~~~~~~~~~· */
+.van-tab__pane{
+  background-color: #D3D3D3;
+}
+
+.writer{
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.writerContainer{
+  height: 40px;
+  width: 170px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar{
+  background-color: #258686;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+.number{
+  font-size: 16px;
+  width: 120px;
+}
+
+.time{
+  font-size: 12px;
+  width: 120px;
+}
+
+/* 底部margin记得修改 */
+.text{
+  margin-left: 50px;
+}
+
+.text text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.pic{
+  margin-left: 50px;
+  margin-bottom: 15px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picContainer{
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.co{
+  padding-top: 5px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+
+.coContainer{
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coContainer image{
+  width: 24px;
+  height: 24px;
 }

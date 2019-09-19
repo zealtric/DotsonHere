@@ -1,5 +1,84 @@
 /* pages/qson/qson.wxss */
-#qsonBtn{
+
+/* 输入栏 */
+textarea{
+  width: 96vw;
+  height: 150px;
+  padding: 5px 2vw;
+  /* background-color: #555; */
+}
+
+/* 底部栏 */
+#bottomBar{
+  height: 50px;
+  width: 100vw;
   position: fixed;
-  bottom: 0;
+}
+
+/* 选取图片按钮 */
+#imgBtn{
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#imgBtn image{
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+/* 发送按钮 */
+#qsonBtn{
+  height: 50px;
+  width: 20vw;
+  /* position: relative;
+  top: -40px;
+  left: 75vw; */
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+#qsonBtn button{
+  width: 20vw;
+  height: 30px;
+  font-size: 12px;
+  /* qsonBtn的高度为24px，但是还有border上下各1px */
+  line-height: 28px;
+  /* color: #FFE66A; */
+  border-radius: 25px;
+  /* border: 1px solid #BB4F4F;
+  background-color: #CF7F7F; */
+}
+
+/* 选取的照片展示区 */
+#prePhoto{
+  width: 92vw;
+  padding: 0 3vw 0 5vw;
+  margin-top: 10px;
+}
+
+#prePhoto image{
+  width: 21vw;
+  height: 21vw;
+  float: left;
+  margin-right: 2vw;
+  border-radius: 2vw;
+}
+
+/*删除按钮*/
+.delete {
+  width: 5vw;
+  height: 5vw;
+  float: left;
+  position: relative;
+  left: -7vw;
+  margin-right: -5vw;
+  font-size: 12px;
+  text-align: center;
+  background-color: #ccc;
+  opacity: 0.6;
+  border-radius: 0 2vw 0 0;
+  color: #999;
 }

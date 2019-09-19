@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -32,16 +32,27 @@ Page({
    * ZEA：天才啊
    */
   onShow: function () {
-    this.data.num++;
-    if (this.data.num % 2 == 0) {
-      wx.switchTab({
-        url: '../home/home'
-      });
-    } else {
-      wx.navigateTo({
-        url: '../qson/qson'
-      })
-    }
+    // 查看是否授权
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          this.data.num++;
+          if (this.data.num % 2 == 0) {
+            wx.switchTab({
+              url: '../home/home'
+            });
+          } else {
+            wx.navigateTo({
+              url: '../qson/qson'
+            })
+          }
+        }else{
+          wx.switchTab({
+            url: '/pages/self/self',
+          })
+        }
+      }
+    })
   },
 
   /**
